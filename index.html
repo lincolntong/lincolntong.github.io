@@ -28,7 +28,7 @@
 <!-- JiaThis Button END -->
 
 <a target=blank href=tencent://message/?uin=123456&Site=工具啦&Menu=yes><img border="0" SRC=http://wpa.qq.com/pa?p=1:123456:1 alt="点击这里给我发消息"></a>
-<button onclick="getLocation()">点击获取位置 </button>
+<button onclick="getLocation()">点击获取位置经纬度 </button>
 <div id="demo"></div>
 <script>
     var x= document.getElementById('demo');
@@ -43,7 +43,7 @@
         
     }
     function showPosition(position){
-        x.innerHTML = "latitude:"+position.coords.latitude + '<br />Longitude:'+position.coords.longitude;
+        x.innerHTML = "latitude纬度:"+position.coords.latitude + '<br />Longitude经度:'+position.coords.longitude;
     }
     function showError(err){
         console.log(err)
