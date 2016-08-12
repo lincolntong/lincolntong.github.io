@@ -28,5 +28,26 @@
 <!-- JiaThis Button END -->
 
 <a target=blank href=tencent://message/?uin=123456&Site=工具啦&Menu=yes><img border="0" SRC=http://wpa.qq.com/pa?p=1:123456:1 alt="点击这里给我发消息"></a>
+<button onclick="getLocation()">点击获取位置 </button>
+<div id="demo"></div>
+<script>
+    var x= document.getElementById('demo');
+    function getLocation()
+    {
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(showPosition,showError);
+        }
+        else{
+            x.innerHTML = 'Geolocation is not supported by this Browser.';
+        }
+        
+    }
+    function showPosition(position){
+        x.innerHTML = "latitude:"+position.coords.latitude + '<br />Longitude:'+position.coords.longitude;
+    }
+    function showError(err){
+        console.log(err)
+    }
+</script>
 </body>
 </html>
