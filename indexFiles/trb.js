@@ -2,7 +2,6 @@ $(function(){
     //全屏
     $('#fullpage').fullpage({
         sectionsColor: ['#1bbc9b', '#141414', '#999999', '#5bc0de','#f91'],
-        'navigation': true,
         anchors:['page1', 'page2', 'page3', 'page4','page5','page6'],
         menu: '#menu',
         afterLoad: function(anchorLink, index){
@@ -32,7 +31,6 @@ $(function(){
             }
         }
     });
-
     //字体闪烁
     (function(){
         var oTitle=$('.section1 .title');
