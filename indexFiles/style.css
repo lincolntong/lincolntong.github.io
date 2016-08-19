@@ -42,7 +42,6 @@ body{font-size: 12px; font-family: "微软雅黑";}
 #menu a:hover{background-color: #C9BFBF}
 #menu .active a { color: #fff; background-color: #333;}
 
-.box{ width: 1000px; height: 500px; margin: auto;}
 
 .section2 .pic{ display: inline-block; float: left; height: 400px; margin: 0 30px; border: 10px solid #666;}
 .s2-ul{ display: inline-block; float: left; width: 570px;}
