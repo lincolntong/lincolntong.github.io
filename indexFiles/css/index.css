@@ -1,3 +1,4 @@
+@charset "utf-8";
 .desc{
     width: 85px;
     height: 30px;
@@ -51,6 +52,8 @@
 .s2-side-logo:nth-child(4){top:calc(10% - 5px);}
 .s2-side-logo:nth-child(5){top:calc(50% - 10px);}
 .s2-side-logo:nth-child(6){top:calc(90% - 10px);}
+.s2-side-logo img{width: 150px;height: auto;}
+.s2-side-logo h4{width: 100px;}
 
 .s2_body_list{
     text-align: left;
