@@ -77,18 +77,14 @@ $(function(){
     (function(){
         var oli=$('.s4-ul li');
         var oImg=$('.section4 .s4-show');
-        var oArr=['天猫.png','100度.png','摄影.png','慕课网.png'];
+        var oArr=['glrd.png','jro.png','sxjl.png','慕课网.png'];
         var iNum=0;
 
         oli.hover(function(){
             $(this).find('p').show();
             $(this).mousemove(function(ev){
-                iNum=$(this).index();//方法三
-                //var imgSrc=$(this).find('a').css('backgroundImage');
-                //imgSrc = imgSrc.replace(/url\("/,"");//方法一，去掉 url("
-                //imgSrc = imgSrc.replace(/"\)/,"");//去掉后面的 ")
-                //imgSrc = imgSrc.slice(5,(imgSrc.length-2));//方法二
-                oImg.attr('src','img/com/'+oArr[iNum]).css('left',(ev.pageX+50)).show();
+                iNum=$(this).index();
+                oImg.attr('src','indexFiles/images/'+oArr[iNum]).css('left',(ev.pageX-300)).show();
             });
 
         },function(){

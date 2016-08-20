@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>商品分类</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <style>
+              body{
+                margin: 0 0 80px;
+                height: 100%;
+                background-color: #f5f5f5;
+            } 
+            a:hover{
+                text-decoration-line: none;
+            }
+            header{
+                display: flex;
+                justify-content: space-between;
+                background-color: #f2f2f2;
+                align-items: center;
+                font-size: 3rem;
+                height: 9rem;
+                padding: 1rem 2rem;
+                color: #919191;
+            }
+            
+            header>div>a>img{
+                width: 4.2rem;
+                height: 4.2rem;
+            } /*头文件*/
+            main{
+                background-color: white;
+                margin: 1vw;
+            }
+            .h1{
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }  
+            .h1>h1{
+                font-size: 3rem;
+            }
+            .img{
+                width: 100%;
+                display: flex;
+                 text-align: center;
+                justify-content: space-around;
+            }
+            .img a div img{
+                margin: 3rem 0;
+            }
+            .img div>span{
+                font-size: 2.5rem; 
+                color: #333333;  
+            }
+             footer{
+                display: flex;
+                justify-content: space-around;
+                position: fixed;
+                width: 100%;
+                border-top: 1px solid #e3e3e3;
+                background-color: white;
+                bottom: 0;
+            }
+            footer>div{
+                text-align: center;
+                font-size: 2rem;
+                padding: 1rem;
+               
+            }
+            .icon>a{
+                 color: #999999; 
+            }
+            .icon:nth-child(2)>a{
+                text-decoration: none;
+                color: #FF5722;
+            }
+            .icon>a:hover{
+                color: #FF5722;
+                text-decoration-line: none;
+            }
+            .icon:nth-child(1)>a:active{
+                color: #FF5722;
+            }
+            @media (max-width:701px){
+                 body{
+                margin: 0 0 11vw;
+            } 
+            .img>a>div>img{
+                width: 14vw;
+                height: 14vw;
+            }
+            .img a div img{
+                margin: 3.7vw 0;
+            }
+            header{
+                font-size: 3.7vw;
+                height: 11vw;
+                padding: 1.2 2.5;
+            }
+            header>div>a>img{
+                width: 5vw;
+                height: 5vw;
+            } 
+            .h1>h1{
+                font-size: 2.7vw;
+            }
+            .img>a>div>span{
+                font-size:3.1vw;   
+            }
+           footer>div{
+                font-size: 3vw;
+                padding: 2vw;
+            }
+            footer>div>a>img{
+                width: 7vw;
+                height: 6vw;
+            }
+
+            }
+        </style>
+    </head>
+    <body>
+        
+        <header>
+            <div><a href="index.html"><img src="image/list-image/back.png" alt="返回"></a></div>
+            <span style="color: #666666;">商品分类</span>
+            <div><a href="搜索框.html"><img src="image/list-image/search.png" alt="搜索"></a></div>
+        </header>
+        <main>
+        <div class="h1"><h1>手机 / 平板 / 电话卡</h1></div>
+        <div class="img">
+            <a href="小米Max全网通.html"><div><img src="image/goods/1.png" alt=""><br><span>小米Max</span></div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/2.png" alt=""><br><span>小米5</span></div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/3.png" alt=""><br><span>小米s</span></div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/4.png" alt=""><br><span>小米Note</span></div></a>
+        </div>
+         <div class="img">
+            <a href="小米Max全网通.html"><div><img src="image/goods/5.png" alt=""><br><span>小米4c</span></div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/6.png" alt=""><br><span>小米4</span></div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/7.png" alt=""><br><span>红米3</span></div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/8.png" alt=""><br><span>红米Note 3</span></div></a>
+        </div>
+         <div class="img">
+            <a href="小米Max全网通.html"><div><img src="image/goods/9.png" alt=""><br><span>小米平板2</span></div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/10.png" alt=""> <br><span>电信手机</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/11.png" alt=""> <br><span>官翻机</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/12.png" alt=""> <br><span>小米移动</span> </div></a>
+        </div>
+        </main>
+        <main>
+        <div class="h1"><h1>电视 / 盒子</h1></div>
+        <div class="img">
+            <a href="小米Max全网通.html"><div><img src="image/goods/13.png" alt=""> <br><span>小米电视43"</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/14.png" alt=""> <br><span>小米电视48"</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/15.png" alt=""> <br><span>分体电视55"</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/16.png" alt=""> <br><span>分体电视60"</span> </div></a>
+        </div>
+         <div class="img">
+            <a href="小米Max全网通.html"><div><img src="image/goods/17.png" alt=""> <br><span>曲面电视65"</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/18.png" alt=""> <br><span>分体电视70"</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/9.png" alt=""> <br><span>主机/低音炮</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/20.png" alt=""> <br><span>家庭音响</span> </div></a>
+        </div>
+         <div class="img">
+            <a href="小米Max全网通.html"><div><img src="image/goods/21.png" alt=""> <br><span>小米盒子3</span> </div></a>
+           <a href="小米Max全网通.html"> <div><img src="image/goods/22.png" alt=""> <br><span>盒子mini版</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/23.png" alt=""> <br><span>蓝牙手柄</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/24.png" alt=""> <br><span>电视/盒子配件</span> </div></a>
+        </div>
+        </main>
+        <main>
+        <div class="h1"><h1>电视 / 盒子</h1></div>
+        <div class="img">
+            <a href="小米Max全网通.html"><div><img src="image/goods/26.png" alt=""> <br><span>净化器/滤芯</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/27.png" alt=""> <br><span>净水器/滤芯</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/28.png" alt=""> <br><span>九号平衡车</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/29.png" alt=""> <br><span>智能家庭组合</span> </div></a>
+        </div>
+         <div class="img">
+            <a href="小米Max全网通.html"><div><img src="image/goods/30.png" alt=""> <br><span>智能家庭组合</span> </div></a>
+           <a href="小米Max全网通.html"> <div><img src="image/goods/31.png" alt=""> <br><span>智能电饭煲</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/32.png" alt=""> <br><span>手环及配件</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/33.png" alt=""> <br><span>体重秤</span> </div></a>
+        </div>
+         <div class="img">
+            <a href="小米Max全网通.html"><div><img src="image/goods/34.png" alt=""> <br><span>血压计</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/35.png" alt=""> <br><span>运动相机</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/36.png" alt=""> <br><span>智能摄像机</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/37.png" alt=""> <br><span>智能灯</span> </div></a>
+        </div>
+        <div class="img">
+            <a href="小米Max全网通.html"><div><img src="image/goods/38.png" alt=""> <br><span>万能遥控器</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/39.png" alt=""> <br><span>智能插座</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/40.png" alt=""> <br><span>网络收音机</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/41.png" alt=""> <br><span>儿童电话手表</span> </div></a>
+        </div>
+        </main>
+        <main>
+            <div class="h1"><h1>移动电源 / 插线板 / 电池</h1></div>
+         <div class="img">
+            <a href="小米Max全网通.html"><div><img src="image/goods/42.png" alt=""> <br><span>小米移动电源</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/45.png" alt=""> <br><span>插线板</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/46.png" alt=""> <br><span>电池</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/47.png" alt=""> <br><span>充电器</span> </div></a>
+        </div>
+        <div class="img">
+            <a href="小米Max全网通.html"><div><img src="image/goods/48.png" alt=""> <br><span>小米移动电源</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/49.png" alt=""> <br><span>插线板</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/1000.png" alt=""> <br><span></span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/1000.png" alt=""> <br><span></span> </div></a>
+        </div>
+        </main>
+        <main>
+            <div class="h1"><h1>耳机 / 音箱 / 存储卡</h1></div>
+         <div class="img">
+            <a href="小米Max全网通.html"><div><img src="image/goods/50.png" alt=""> <br><span>胶囊耳机</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/51.png" alt=""> <br><span>蓝牙耳机</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/52.png" alt=""> <br><span>圈铁耳机</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/53.png" alt=""> <br><span>活塞耳机</span> </div></a>
+        </div>
+        <div class="img">
+            <a href="小米Max全网通.html"><div><img src="image/goods/54.png" alt=""> <br><span>头戴式耳机</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/55.png" alt=""> <br><span>品牌耳机</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/56.png" alt=""> <br><span>音箱</span> </div></a>
+            <a href="小米Max全网通.html"> <div><img src="image/goods/57.png" alt=""> <br><span>存储卡</span> </div></a>
+        </div>
+        </main>
+        <main>
+            <div class="h1"><h1>小米生活方式</h1></div>
+         <div class="img">
+            <a href="小米Max全网通.html"><div><img src="image/goods/58.png" alt=""> <br><span>服装</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/59.png" alt=""> <br><span>米兔</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/60.png" alt=""> <br><span>背包</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/61.png" alt=""> <br><span>旅行箱</span> </div></a>
+        </div>
+        <div class="img">
+            <a href="小米Max全网通.html"><div><img src="image/goods/62.png" alt=""> <br><span>自拍杆</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/63.png" alt=""> <br><span>鼠标垫</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/64.png" alt=""> <br><span>随身WiFi</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/65.png" alt=""> <br><span>生活周边</span> </div></a>
+        </div>
+        <div class="img">
+            <a href="小米Max全网通.html"><div><img src="image/goods/66.png" alt=""> <br><span>支架</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/67.png" alt=""> <br><span>防尘塞</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/68.png" alt=""> <br><span>自拍补光灯</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/1000.png" alt=""> <br><span></span> </div></a>
+        </div>
+        </main>
+        <main>
+            <div class="h1"><h1>保护类配件</h1></div>
+         <div class="img">
+            <a href="小米Max全网通.html"><div><img src="image/goods/69.png" alt=""> <br><span>保护套/保护壳</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/70.png" alt=""> <br><span>贴膜</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/71.png" alt=""> <br><span>后盖</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/72.png" alt=""> <br><span>贴纸</span> </div></a>
+        </div>
+        </main>
+        <main>
+            <div class="h1"><h1>优惠套装</h1></div>
+         <div class="img">
+            <a href="小米Max全网通.html"><div><img src="image/goods/73.png" alt=""> <br><span>电源套装</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/74.png" alt=""> <br><span>智能硬件套装</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/75.png" alt=""> <br><span>旅行箱套装</span> </div></a>
+            <a href="小米Max全网通.html"><div><img src="image/goods/76.png" alt=""> <br><span>运动相机套装</span> </div></a>
+        </div>
+        </main>
+        <footer>
+        <div class="icon"><a href="index.html"><img src="image/index-image/icon.png" alt=""><br><span>商城</span></a></div>
+        <div class="icon"><a href="#"><img src="image/index-image/icon.png" alt=""><br><span>分类</span></a></div>
+        <div class="icon"><a href="购物车.html"><img src="image/index-image/icon.png" alt=""><br><span>购物车</span></a></div>
+        <div class="icon"><a href="服务.html"><img src="image/index-image/icon.png"alt=""><br><span>服务</span></a></div>
+        </footer>
+        
+        
+        
+        
+        
+        
+        
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>登录界面</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            a:hover{
+                text-decoration-line: none;
+            }
+             body{
+                 margin: 0;
+                 height: 100%;
+                 background-color: #F5F5F5;
+             }
+              main{
+                  width: 854px;
+                  background-color: white;
+                  margin: 10vh auto;
+                  padding: 1rem 1rem;
+                  text-align: center; 
+              } 
+              .center{
+                  text-align: center;
+                  margin-top: 70px;
+                  font-size: 3rem;
+              } 
+              .center>p{
+                  margin: 2rem 0;
+              }
+              .code{
+                  float: right;
+              }
+              .input>input{
+                  width: 350px;
+                  height:50px;
+                  margin-top: 10px;
+                  border: 1px solid #E0E0E0;
+              }
+              .load{
+                  width: 350px;
+                  height: 50px;
+                  margin:40px auto 30px;
+                  background-color: #EF5B00;
+                  font-size: 1.5rem;
+                  color: white;
+                  text-align: center;
+                  line-height: 50px;
+              }
+              .load2{
+                  width: 350px;
+                  text-align: center;
+                  margin: 0px auto;
+                  color: #757575;
+              }
+              hr{
+                  width: 125px;
+                  display: inline-block;
+                  vertical-align: middle;
+              }
+              .forget{
+                  margin: 40px auto 0px;
+                  color: #757575;
+              }
+              .forget>span{
+                  display: inline-block;
+                  padding: 0 15px;
+              }
+              .help {
+                  text-align: center;
+                  color: #757575;
+                  font-size: 1.2rem;
+                  line-height: 2rem; 
+              }
+              @media (max-width:850px){
+                  main{
+                  width:400px;
+                  }
+                  .center>p{
+                      font-size: 2rem;
+                  }
+                  .help {
+                  font-size: 1.5vw;
+                  line-height: 2.5vw; 
+                   }
+                   .help img{
+                       width: 2.7vw;
+                       height: 2.7vw;
+                   }
+              }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class="code"><img src="image/loading/code.png" alt=""></div>
+            <div class="center">
+            <div class="m"><img src="image/loading/m.png" alt=""></div>
+             <p>小米账号登录</p>
+            </div>
+            <div class="input">
+                <input type="text"placeholder="邮箱/手机号/小米账号"><br>
+                <input type="text" placeholder="密码">
+            </div>
+            <a href="index.html"><div class="load"><p>立即登录</p></div></a>
+            <div class="load2">
+                <hr><span>其它方式登录</span><hr>
+            </div>
+            <div class="icon"><img src="image/loading/icon.png" alt="icon"></div>
+            <div class="forget">
+                <span>注册小米账号</span><span>|</span><span>忘记密码？</span>
+            </div>
+        </main>
+        <footer>
+            
+            <div class="help">
+                <p><span style="color:#333333;">简体</span><span>｜</span><span>繁体</span><span></span>｜<span>English</span><span>｜</span><span>常见问题</span></p>
+               <p> <span>小米公司版权所有-京ICP备10046444-</span><img src="image/loading/police.png" alt="">
+                <span>京公网安备11010802020134号-京ICP证110507号</span></p>
+            </div>
+        </footer>
+        
+        
+        
+        
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
