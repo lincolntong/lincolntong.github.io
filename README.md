@@ -1,2 +1,0 @@
-
-# lincolntong.github.io
