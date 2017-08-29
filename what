@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+      <div style="color:red;padding-top:100px;font-size:30px;text-align:center;">一样的烟花.</div>
+    </script>
+  </body>
+</html>
