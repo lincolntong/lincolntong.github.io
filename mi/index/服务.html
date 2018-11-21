@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>服务</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <style>
+               body{
+                margin: 0 0 80px;
+                height: 100%;
+                background-color: #f5f5f5;
+            } 
+            header{
+                display: flex;
+                justify-content: space-between;
+                background-color: #f2f2f2;
+                align-items: center;
+                font-size: 3rem;
+                height: 9rem;
+                padding: 1rem 2rem;
+                color: #919191;
+            }
+            
+            header>div>a>img{
+                width: 4.2rem;
+                height: 4.2rem;
+            } 
+             footer{
+                display: flex;
+                justify-content: space-around;
+                position: fixed;
+                width: 100%;
+                border-top: 1px solid #e3e3e3;
+                background-color: white;
+                bottom: 0;
+            }
+            footer>div{
+                text-align: center;
+                font-size: 2rem;
+                padding: 1rem;
+               
+            }
+            .icon>a{
+                 color: #999999; 
+            }
+            .icon:nth-child(4)>a{
+                text-decoration: none;
+                color: #FF5722;
+            }
+            .icon>a:hover{
+                color: #FF5722;
+                text-decoration-line: none;
+            }
+            .icon:nth-child(1)>a:active{
+                color: #FF5722;
+            }  
+            
+            .orange{
+                background-color:#FF6B00;
+                width: 100%;
+                height: 17rem; 
+            }
+            .orange>div{
+                height: 70%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            main{
+                position: relative;
+                background-color: white;
+            }
+            main>a{
+                color: white;
+            }
+            main>a:hover{
+                text-decoration-line: none;
+                color: white;
+            }
+            .round{
+                position: absolute;
+                left: calc(50% - 73px);
+                top: calc(17rem - 73px);
+                z-index: 3;
+            }
+            .pay{
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+            .pay>div{
+                width: 33%;
+                padding-top:10rem;
+                border-right: 1px solid #ECECEC;
+                font-size: 2.5rem;
+                text-align: center;
+            }
+            .pay>div>span{
+                display: inline-block;
+                padding-top: 2rem;
+            }
+            hr{
+                width: 4.5rem;  
+            }
+            section{
+                margin: 2rem 0;
+                background-color: white;
+            }
+            .part{
+                padding: 3rem;
+                font-size: 2.5rem;
+                border-bottom: 1px solid #ECECEC;
+            }
+             @media (max-width:701px){
+                 body{
+                margin: 0 0 11vw;
+            } 
+            header{
+                font-size: 3.7vw;
+                height: 11vw;
+                padding: 1.2 2.5;
+            }
+            header>div>a>img{
+                width: 5vw;
+                height: 5vw;
+            } 
+             .orange{
+                height: 21vw; 
+            }
+            .orange h1{
+                font-size: 4vw;
+            }
+            .round>img{
+                width: 18vw;
+                height: 18vw;
+            }
+            .round{
+                left: calc(50% - 10vw);
+                top: calc(21vw - 10vw);
+            }
+
+            .pay>div{
+                padding-top:12.3vw;
+                font-size: 3.1vw;
+            }
+            .pay>div>span{
+                padding-top:2.5vw;
+            }
+            .pay img{
+                width: 7.3vw;
+                height: 7.3vw;
+            }
+            hr{
+                width: 5.5vw;  
+            }
+            section{
+                margin: 2.5vw 0;
+            }
+            .part{
+                padding: 3.7vw;
+                font-size: 3.1vw;
+            }
+            .part>img{
+                width: 5.8vw;
+                height: 5.8vw;
+            }
+            footer>div{
+                font-size: 2.5vw;
+                padding: 1.2vw;
+            }
+            footer>div>a>img{
+                width: 6.4vw;
+                height: 6vw;
+            }
+            } 
+        </style>
+    </head>
+    <body>
+        <header>
+            <div><a href="index.html"><img src="image/list-image/back.png" alt="返回"></a></div>
+            <span style="color: #666666;">个人中心</span>
+            <div><a href="搜索框.html"><img src="image/list-image/search.png" alt="搜索"></a></div>
+        </header>
+        <main>
+           <a href="登录界面.html"><div class="orange"><div><h1>立即登录</h1></div></div></a>
+           <a href="登录界面.html"><div class="round"><img src="image/service/yellow.png" alt="黄圈圈"></div></a>
+           <div class="pay">
+               <div><img src="image/service/menu1.png" alt=""><br><span>全部订单</span><hr style="border:1px solid #E33F7B;"></div>
+               <div><img src="image/service/menu1.png" alt=""><br><span>待付款</span><hr style="border:1px solid #8BC34A;"></div>
+               <div><img src="image/service/menu1.png" alt=""><br><span>代收货</span><hr style="border:1px solid #FFAA00;"></div>
+           </div>
+        </main>
+        <section>
+            <div class="part"><img src="image/service/menu.png" alt=""> &nbsp;我的优惠</div>
+            <div class="part"><img src="image/service/menu.png" alt=""> &nbsp;F码通道</div>
+        </section>
+        <section>
+            <div class="part"><img src="image/service/menu.png" alt=""> &nbsp;我的服务</div>
+        </section>
+        <section>
+            <div class="part"><img src="image/service/menu.png" alt=""> &nbsp;我的设置</div>
+        </section>
+  
+        <footer>
+        <div class="icon"><a href="index.html"><img src="image/index-image/icon.png" alt=""><br><span>商城</span></a></div>
+        <div class="icon"><a href="商品分类.html"><img src="image/index-image/icon.png" alt=""><br><span>分类</span></a></div>
+        <div class="icon"><a href="购物车.html"><img src="image/index-image/icon.png" alt=""><br><span>购物车</span></a></div>
+        <div class="icon"><a href="#"><img src="image/index-image/icon.png"alt=""><br><span>服务</span></a></div>
+        </footer>
+        
+        
+        
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>

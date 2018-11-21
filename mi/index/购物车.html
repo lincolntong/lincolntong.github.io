@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <meta name="author" content="童林开">
+        <title>购物车</title>
+        <style>
+             body{
+                margin: 0 0 100px;
+                height: 100%;
+                background-color: #f5f5f5;
+            } 
+            a:hover{
+                text-decoration-line:none;
+            }
+            header{
+                display: flex;
+                justify-content: space-between;
+                background-color: #f2f2f2;
+                align-items: center;
+                font-size: 3rem;
+                height: 9rem;
+                padding: 1rem 2rem;
+                color: #919191;
+            }
+            
+            header>div>a>img{
+                width: 4.2rem;
+                height: 4.2rem;
+            } /*头文件*/
+            .shop{
+                background-color: white;
+            }
+            .sum>div{
+                width: 60px;
+                height: 60px;
+                float: left;
+                font-size: 4rem;
+                text-align: center;
+                color: #999999;
+                background-color: #F4F4F4;
+            }
+            .sum>div:nth-child(2){
+                background-color: white;
+                border: 1px solid #F4F4F4;
+            }
+            main{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 2rem 2rem 3rem 1rem;
+            }
+            .shop-right{
+                width: 90%; 
+            }
+            .shop-right>h1{
+                font-size: 3rem;
+                color: #666666;
+            }
+            .shop-right>p{
+                font-size: 2rem;
+                color: #999999;
+            }
+            .tip{
+                font-size: 2.3rem;
+                color: #999999;
+                padding: 2rem;
+                border-top: 1px solid #F4F4F4;
+                background-color: white;
+                margin-bottom: 10px;
+            }
+            section>div>div{
+                padding: 2rem;
+                background-color: white;
+                font-size: 2.4rem;
+                color: #666666;
+                
+            }
+            .to{
+                border-left: 1px solid #f4f4f4;
+                height: 100%;
+                padding:2rem 4rem;
+            }
+            section>div{
+                display: flex;
+                justify-content: space-between;
+                background-color: white;
+                border-bottom: 1px solid #f4f4f4;
+                
+            }
+            
+            footer{
+                  position: fixed;
+                bottom: 0;
+                width: 100%;
+            }
+            .footer{
+                display: flex;
+                justify-content: center;  
+                width: 100%;
+            }
+            .footer>div{
+                width: 33.33333%;
+                box-sizing: border-box;
+                padding: 1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 10rem;
+            }
+            .footer>div:nth-child(1){
+                border: 1px solid #f4f4f4;
+                background-color: white;
+                color: #999999;
+                font-size: 2.4rem;
+            }
+            .footer>div:nth-child(2){
+                background-color: #F4F4F4;
+                font-size: 3rem;
+                color: #333346;
+            }
+           .footer>div:nth-child(3){
+                background-color: #FF5722;
+                font-size: 3rem; 
+                color:white;
+            }
+            .footer a{color:#333346; }
+            .footer span{
+                color: #FF5722;
+                font-size: 3.0rem;
+                font-weight: 900;
+            }
+            .footer p{
+                padding-top: 1.5rem;
+            }
+            @media (max-width:701px){
+                header{
+                font-size: 3.7vw;
+                height: 11vw;
+                padding: 1.2vw 2.5vw;
+            }
+            
+            header>div>a>img{
+                width: 5.2vw;
+                height: 5.2vw;
+            } /*头文件*/
+            .sum>div{
+                width: 8.2vw;
+                height: 8.2vw;
+                font-size: 4.9vw;
+            }
+            main{
+                padding: 2.5vw 2.5vw 2.5vw 2.5vw;
+            }
+            .shop>div:nth-child(1)>img{
+                width: 25vw;
+                height: 25vw;
+            }
+            .shop>div:nth-child(3)>img{
+                width: 5.3vw;
+                height: 5.3vw;
+            }
+            .shop-right>h1{
+                font-size: 3.7vw;
+            }
+            .shop-right>p{
+                font-size: 2.5vw;
+            }
+            .tip{
+                font-size: 2.7vw;
+                padding: 2.7vw;
+                margin-bottom: 1vw;
+            }
+            section>div>div{
+                padding: 2.7vw;
+                font-size: 3.0vw;
+            }
+            section>div>div>img{
+                width: 4.2vw;
+                height: 4.2vw;
+            }
+            .to{
+                padding:2.5vw 5vw;
+            }
+            
+            .footer>div{
+                padding: 1.2vw;
+                height: 12.3vw;
+            }
+            .footer p{
+                padding-top: 1.8vw;
+            }
+            .footer>div:nth-child(1){
+                font-size: 3vw;
+            }
+            .footer>div:nth-child(2){
+                font-size: 3.7vw;
+            }
+           .footer>div:nth-child(3){
+                font-size: 3.7vw; 
+            }
+            .footer span{
+                font-size: 4.2vw;
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div><a href="index.html"><img src="image/list-image/back.png" alt="返回"></a></div>
+            <span style="color: #666666;">购物车</span>
+            <div><a href="搜索框.html"><img src="image/list-image/search.png" alt="搜索"></a></div>
+        </header>
+        <main class="shop">
+            <div><img src="image/car/lighter.jpg" alt="耳机线"></div>
+            <div class="shop-right">
+                <h1>小米圈铁耳机 银色</h1>
+                <p>售价:&#x3000;99元 合计198元</p>
+                <div class="sum">
+                    <div>-</div>
+                    <div>1</div>
+                    <div>+</div>
+                </div>
+            </div>
+            <div><img src="image/car/can.png" alt="删除"></div>
+        </main>
+        <div class="tip"><span>温馨提示：产品是否购买成功，以最终下单为准，请尽快结算</span></div>
+        <section>
+            <div>   <div><img src="image/car/right.png" alt="">+1元得小米礼品袋</div>
+                    <div class="to"><img src="image/car/go.png" alt="转到"></div>
+            </div>
+            <div>   <div><img src="image/car/right.png" alt="">+17.9元得小米随身WiF</div>
+                    <div class="to"><img src="image/car/go.png" alt="转到"></div>
+            </div>
+            <div>   <div><img src="image/car/right.png" alt="">+9.9元得彩虹5号电池</div>
+                    <div class="to"><img src="image/car/go.png" alt="转到"></div>
+            </div>
+            <div>   <div><img src="image/car/right.png" alt="">+12.9元得多彩便携USB线 120cm</div>
+                    <div class="to"><img src="image/car/go.png" alt="转到"></div>
+            </div>
+            <div>   <div><img src="image/car/right.png" alt="">+29元得小米活塞耳机 基础版</div>
+                    <div class="to"><img src="image/car/go.png" alt="转到"></div>
+            </div>
+            <div>   <div><img src="image/car/right.png" alt="">+4.9元得小米鼠标垫</div>
+                    <div class="to"><img src="image/car/go.png" alt="转到"></div>
+            </div>
+
+        </section>
+        
+        <footer>
+            <div class="footer">
+            <div><p>共一件 金额：<br><span>99</span>元</p>
+            </div>
+            <div><a href="商品分类.html">继续购物</a></div>
+            <div>去结算</div>
+            </div>
+        </footer>
+    </body>
+        
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>

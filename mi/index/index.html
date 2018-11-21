@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <meta name="author" content="童林开">
+        <title>小米商城首页</title>
+        <style>
+            a:hover{
+                text-decoration-line: none;
+            }
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                margin: 0 0 50px 0;
+                height: 100%;
+                width: 100%;
+                min-width: 165px;
+                overflow-x: hidden;
+            }
+            .head-image{
+                width: 100%;
+                position: relative;
+            }
+
+            .close{
+                position: absolute; 
+                height: 100%;
+                right: 5%;
+                top:calc(50% - 26px);
+            }
+            .input{
+                width: 100%;
+                border: none;
+                line-height: 7rem;
+                font-size: 4rem;
+                padding-left: 2rem;
+                text-decoration:none;
+                color: #9C9C9C;
+            }
+            .border{
+                border: 1px solid #e3e3e3;
+                margin: 0.2rem;
+                height: 0.8rem;
+                border-top: none;
+            }
+            .push{
+                display: flex;
+                justify-content: center;
+                background-color: #f5f5f5;
+            }
+            .push>div>a>img{
+                width: 230px;
+                height: 300px;
+                margin: 10px;
+            }
+            .goods{
+                padding: 3rem ;
+                display: flex;
+                justify-content: flex-start;
+                border-bottom: 1px solid #e3e3e3;
+            }
+            .goods h1{
+                color: black;
+                margin-top: 0;
+            }
+
+            .detail{
+                color: #9c9c9c;
+                font-size: 2rem;
+            }
+            .brace{
+                color:#FE4900;
+                font-size: 2rem;
+            }
+            .img{
+                position: relative;
+                margin-left: 5vw;
+                float: left;
+                padding-bottom: 5rem;
+                padding-right: 8rem;
+                box-sizing: border-box;
+            }
+            .img>img:nth-child(2){
+                position: absolute;
+                left:-2.5vw;
+                bottom: 0;
+                width: 13rem;
+                height: 13rem;
+            }
+            footer{
+                display: flex;
+                justify-content: space-around;
+                position: fixed;
+                width: 100%;
+                border-top: 1px solid #e3e3e3;
+                background-color: white;
+                bottom: 0;
+            }
+            footer>div{
+                text-align: center;
+                font-size: 2rem;
+                padding: 1rem;
+               
+            }
+            .icon>a{
+                 color: #999999; 
+            }
+            .icon:nth-child(1)>a{
+                text-decoration: none;
+                color: #FF5722;
+            }
+            .icon>a:hover{
+                color: #FF5722;
+                text-decoration-line: none;
+            }
+            .icon:nth-child(1)>a:active{
+                color: #FF5722;
+            }
+            
+            #hidden{
+                display: unset;
+            }
+            @media (max-width:700px){
+                body{
+                    margin-bottom: 11vw;
+                }
+               .close img{
+                width: 5vw;
+                height: 5vw;
+                 }
+                 .close{
+                 right:5%;
+                 top:calc(50% - 2.5vw);
+                 }
+                .input{
+                    font-size: 5vw;
+                    line-height: 7vw;
+                    padding-left: 2vw;
+                }
+                .goods{
+                     padding: 1vw;
+                }
+                .goods h1{
+                    font-size: 5vw;
+            }
+            .border{
+                margin: 0.2vw;
+                height: 0.8vw;
+
+            }
+            .detail{
+                font-size: 2.2vw;
+                margin: 0;
+            }
+            .brace{
+                font-size: 2.2vw;
+            } 
+            .img>img:nth-child(1){
+                height: 15vw;
+                width: 14.5vw;
+            }
+            .img>img:nth-child(2){
+                height: 16vw;
+                width: 16vw;
+            }
+            .img{
+                height: 20vw;
+                height: 20vw;
+                margin-left: 2vw;
+                padding-right: 5vw;
+            }
+            .push>div>a>img{
+                width: 30vw;
+                height: 40vw;
+            }
+            .carousel-indicators li, .carousel-indicators .active{
+                width: 1vw;
+                height: 1vw;
+            }
+            .carousel-indicators{
+                bottom: 2vw;
+            }
+            footer{
+                height: 12vw;
+                padding-bottom: 2vw;
+            }
+            footer>div{
+                font-size: 3vw;
+                padding: 2vw;
+            }
+            footer>div>a>img{
+                width: 7vw;
+                height: 6vw;
+            }
+
+            }
+             @media (max-width:250px){
+                 .close{
+                top:2.5vw;
+                 }
+             }
+             @media (max-width:150px){
+                 .close{
+                top:1vw;
+                 }
+                 .img>img:nth-child(2){
+                bottom: 10vw;
+            }
+             }
+             @media (max-width:200px){
+                 .img>img:nth-child(2){
+                display: none;
+            }
+             }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="head-image" id="hidden">
+                <a href="下载.html"><img  style="width:100%;" src="image/index-image/head.png" alt="小米商城客户端"></a>
+                <div class="close">     
+               <a href="javascript:closeTop()"><img src="image/index-image/close.png"  alt="关闭"></a>
+                </div>
+           </div>
+           
+           <div class="search"> <!--搜索框-->
+                <a href="搜索框.html"><div class="input">
+                    <span class="glyphicon glyphicon-search"></span>
+                    搜索商品名称
+                    <div class="border"></div>
+                </div>
+               </a>
+           </div>
+           
+           <div id="carousel-example-generic" class="carousel slide" data-ride="carousel"><!--轮播图-->
+                <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1" ></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+                </ol>
+
+
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                 <img style="width:100%;height:25vw;" src="image/index-image/scroll1.jpg">
+                 </div>
+                 <div class="item">
+                 <img style="width:100%;height:25vw;" src="image/index-image/scroll2.jpg">
+                 </div>
+                 <div class="item ">
+                 <img style="width:100%;height:25vw;" src="image/index-image/scroll3.jpg">
+                 </div>
+                 <div class="item">
+                 <img style="width:100%;height:25vw;" src="image/index-image/scroll4.jpg">
+                 </div>
+                 <div class="item">
+                 <img style="width:100%;height:25vw;" src="image/index-image/scroll5.jpg">
+                 </div>
+             </div>
+        </header>
+        <div class="push">
+            <div class="push1">
+                <a href="红米.html"><img src="image/index-image/show1.jpg" alt=""></a>
+            </div>
+            <div class="push2">
+                <a href="红米.html"><img src="image/index-image/show2.jpg" alt=""></a>
+            </div>
+            <div class="push3">
+                <a href="红米.html"><img src="image/index-image/show3.jpg" alt=""></a>
+            </div>
+            </div>
+        </div>
+        
+        <a href="小米Max全网通.html"><div class="goods">
+            <div class="img">
+              <img  src="image/goods/1.png" alt="">
+              <img src="image/index-image/2.png" alt="">  
+            </div>
+            <div class="goods-right">
+            <h1>小米Max全网通</h1>
+            <p class="detail">6.44"大屏黄金尺寸 / 32GB 容量 / 3GB内存 / 4850mAh 大电量 / 骁龙650处理器 / 金属机身 / 指纹识别 / 2.5D玻璃</p>
+            <p class="brace">1499元</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/2.png" alt="">
+            </div>
+            <div class="goods-right">
+            <h1>小米手机5</h1>
+            <p class="detail">骁龙820处理器 / 4GB 内存 / 128GB 闪存 / 4轴防抖相机 / 3D陶瓷机身</p>
+            <p class="brace">1999元 起</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/3.png" alt="">
+              <img src="image/index-image/2.png" alt="">  
+            </div>
+            <div class="goods-right">
+            <h1>红米手机3 高配版</h1>
+            <p class="detail">
+            指纹识别 / 全网通双卡双待 / 金属机身 / 4100mAh大电池 / 3GB内存+32GB容量 / 最高支持128GB扩展</p>
+            <p class="brace">899元</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/4.png" alt="">
+            </div>
+            <div class="goods-right">
+            <h1>小米　Note</h1>
+            <p class="detail">
+            独立 HiFi 音乐系统 / 5.7英寸全高清屏幕 / 骁龙801四核处理器</p>
+            <p class="brace">1499元</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/5.png" alt="">
+            </div>
+            <div class="goods-right">
+            <h1>小米手机4C</h1>
+            <p class="detail">Type-C 双面充电接口 / 红外遥控 / 5英寸全高清阳光屏 / 骁龙808六核处理器</p>
+            <p class="brace">1099元</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/6.png" alt="">
+            </div>
+            <div class="goods-right">
+            <h1>红米手机 Note3</h1>
+            <p class="detail">金属机身 / 指纹识别 / 4050mAh大电池 / 5.5英寸全高清屏</p>
+            <p class="brace">899元</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/7.png" alt="">
+            </div>
+            <div class="goods-right">
+            <h1>红米手机3</h1>
+            <p class="detail">金属机身 / 4100mAh大电池 / 5英寸阳光屏 / 骁龙616八核处理器 / 2GB内存+16GB容量</p>
+            <p class="brace">699元</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/8.png" alt="">
+            </div>
+            <div class="goods-right">
+            <h1>小米手机3</h1>
+            <p class="detail">不锈钢边框 / 5英寸屏超窄边 / 骁龙801四核处理器 / MIUI、Win10 双系统</p>
+            <p class="brace">1299元 起</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/9.png" alt="">
+              <img src="image/index-image/2.png" alt="">  
+            </div>
+            <div class="goods-right">
+            <h1>小米平板</h1>
+            <p class="detail">全金属机身 / 7.9英寸视网膜屏幕 / 800万像素相机 / 6190mAh大电池 / 支持5V/2A快充</p>
+            <p class="brace">999元</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/15.png" alt="">
+            </div>
+            <div class="goods-right">
+            <h1>小米电视3S 43英寸</h1>
+            <p class="detail">
+                LG、友达 全高清液晶屏 / 金属机身薄至10.9mm / 内容丰富 / 支持壁挂</p>
+            <p class="brace">1799元</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/17.png" alt="">
+              <img src="image/index-image/2.png" alt="">  
+            </div>
+            <div class="goods-right">
+            <h1>小米电视3S 48英寸</h1>
+            <p class="detail">
+                金属机身薄至9.9mm / 原装三星液晶屏 / 四核1.45GHz CPU / 杜比和dts音频双解码 / 支持壁挂</p>
+            <p class="brace">1999元</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/18.png" alt="">
+              <img src="image/index-image/2.png" alt="">  
+            </div>
+            <div class="goods-right">
+            <h1>小米电视3S 65英寸 曲面</h1>
+            <p class="detail">
+            原装进口三星超薄真4K曲面屏 / 金属机身薄至5.9mm / 最美的小米电视</p>
+            <p class="brace">8999元</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/16.png" alt="">
+            </div>
+            <div class="goods-right">
+            <h1>小米电视3</h1>
+            <p class="detail">
+                全金属轻薄机身 / 次世代分体电视</p>
+            <p class="brace">3999元 起</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/21.png" alt="">
+            </div>
+            <div class="goods-right">
+            <h1>小米盒子3 增强版</h1>
+            <p class="detail">
+            全新升级64位 4K网络机顶盒 / 2GB内存 + 8GB容量 / 标配小米蓝牙语音体感遥控器</p>
+            <p class="brace">399元</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/26.png" alt="">
+            </div>
+            <div class="goods-right">
+            <h1>小米净水器（厨上式）</h1>
+            <p class="detail">
+                400加仑大流量 / RO反渗透直出纯净水</p>
+            <p class="brace">99元</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/28.png" alt="">
+            </div>
+            <div class="goods-right">
+            <h1>九号平衡车</h1>
+            <p class="detail">
+        22公里超长续航 / 轻、小、便携 / 重心驱动 / 15重安全保障</p>
+            <p class="brace">1999元</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/30.png" alt="">
+               
+            </div>
+            <div class="goods-right">
+            <h1>小米空气净化器2</h1>
+            <p class="detail">全新空气增压系统，净化能力高达310m³/h / 高效360°桶形净化滤芯 / 低分贝，低功耗 / 手机智能控制，一目了然</p>
+            <p class="brace">699元</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/38.png" alt="">
+            </div>
+            <div class="goods-right">
+            <h1>小钢炮蓝牙音箱 青春版</h1>
+            <p class="detail">
+            低音增强技术 / 轻巧机身，仅一个手掌般大小 / 5小时连播，3小时充满电</p>
+            <p class="brace">99元</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/27.png" alt="">
+              <img src="image/index-image/hot.png" alt=""> 
+            </div>
+            <div class="goods-right">
+            <h1>小米移动电源</h1>
+            <p class="detail">
+            高品质电芯 / 铝合金金属外壳</p>
+            <p class="brace">49元</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/31.png" alt="">
+            </div>
+            <div class="goods-right">
+            <h1>米家压力IH电饭煲</h1>
+            <p class="detail">
+            压力IH加热技术 / 灰铸铁内胆 / 智能烹饪 / 3L大容量</p>
+            <p class="brace">999元</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/30.png" alt="">
+              <img src="image/index-image/2.png" alt="">  
+            </div>
+            <div class="goods-right">
+            <h1>小米路由器3</h1>
+            <p class="detail">
+            全新四天线设计 / 128M超大Flash / 802.11ac 快3倍 / 更安全更稳定 / 手机远程控制</p>
+            <p class="brace">149元</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/27.png" alt="">
+            </div>
+            <div class="goods-right">
+            <h1>小米净水器（厨下式）</h1>
+            <p class="detail">
+            400加仑大流量 / RO反渗透直出纯净水 / 隐藏安装 / 健康家庭必备 / 含上门安装服务费</p>
+            <p class="brace">1999元</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/32.png" alt="">
+            </div>
+            <div class="goods-right">
+            <h1>Amazfit手环 赤道</h1>
+            <p class="detail">
+            健康数据追踪 / 低功耗传感器，10天续航 / 精确睡眠管理 / 智慧震动闹钟 / 来电震动提醒 / 无线充电，简单便捷</p>
+            <p class="brace">299元</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/48.png" alt="">
+            </div>
+            <div class="goods-right">
+            <h1>Type-C快充数据线</h1>
+            <p class="detail">
+            闪电传输，更快更稳定 / 极速快充，5V/2.1A / 一体式设计，耐磨抗冲击 / 线芯加粗，使用寿命长</p>
+            <p class="brace">34.9元</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/37.png" alt=""> 
+            </div>
+            <div class="goods-right">
+            <h1>智能灯泡 彩光版</h1>
+            <p class="detail">
+            【全新推出彩光版】1600万色随心搭配，冷暖色温自由调节 / 手机远程随时遥控 / 11年超长使用寿命 </p>
+            <p class="brace">59元</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/56.png" alt="">
+            </div>
+            <div class="goods-right">
+            <h1>小米随身蓝牙音箱</h1>
+            <p class="detail">
+            玲珑身材，不同凡响 / 车载通话，内置麦克风，稳定清晰，伴你安全前行 / 全金属外壳，3款经典配色</p>
+            <p class="brace">69元</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/41.png" alt="">
+            </div>
+            <div class="goods-right">
+            <h1>米兔儿童电话手表</h1>
+            <p class="detail">
+            高清双向语音通话，五重定位 / 一键紧急呼救，包含位置数据及7秒环境录音 / 三重数据加密，三道安全保障，私密更安全</p>
+            <p class="brace">99元</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/49.png" alt="">
+            </div>
+            <div class="goods-right">
+            <h1>小米多功能网关</h1>
+            <p class="detail">
+            畅听网络电台直播 / 1600万色夜灯 / 自定义铃声 / 手机远程控制</p>
+            <p class="brace">299元</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/46.png" alt="">
+            </div>
+            <div class="goods-right">
+            <h1>小米温湿度传感器</h1>
+            <p class="detail">
+            智能电器联动 / 温湿度异常提醒 / 工业级传感器 / 三步连接，简单上手 / 本产品需搭配小米多功能网关使用</p>
+            <p class="brace">39元</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/68.png" alt="">
+            </div>
+            <div class="goods-right">
+            <h1>小米Wifi放大器</h1>
+            <p class="detail">
+            小巧轻便 / 一步配对免安装 / 不用切换热点，自动选择最优信号 / 180°旋转的USB插口</p>
+            <p class="brace">39元</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/33.png" alt="">
+            </div>
+            <div class="goods-right">
+            <h1>小米体重秤</h1>
+            <p class="detail">
+        100克，喝杯水都可感知的精准 / 高精度压力传感器 / 手机管理全家健康</p>
+            <p class="brace">99元</p>
+            </div>
+        </div>
+        </a>
+        <a href="小米Max全网通.html">
+        <div class="goods">
+            <div class="img">
+              <img  src="image/goods/51.png" alt="">
+            </div>
+            <div class="goods-right">
+            <h1>小米蓝牙耳机</h1>
+            <p class="detail">
+        6.5克轻巧 / 蓝牙4.1高清通话音质 / 荣获德国IF设计大奖 / 低噪音硅麦，语音更清晰</p>
+            <p class="brace">39元</p>
+            </div>
+        </div>
+        </a>
+        <footer>
+        <div class="icon"><a href="#"><img src="image/index-image/icon.png" alt=""><br><span>商城</span></a></div>
+        <div class="icon"><a href="商品分类.html"><img src="image/index-image/icon.png" alt=""><br><span>分类</span></a></div>
+        <div class="icon"><a href="购物车.html"><img src="image/index-image/icon.png" alt=""><br><span>购物车</span></a></div>
+        <div class="icon"><a href="服务.html"><img src="image/index-image/icon.png"alt=""><br><span>服务</span></a></div>
+        </footer>
+        
+    </body>
+        <script>
+            function closeTop(){
+                 document.getElementById("hidden").style.display ="none";
+            }
+        </script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>

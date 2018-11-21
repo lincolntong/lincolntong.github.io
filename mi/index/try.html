@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <meta name="author" content="童林开">
+        <title></title>
+        <style>
+            .bg{
+                margin: 0 auto;
+                height: 1138px;
+                background-repeat: no-repeat;
+                background-position: 50% 0;
+                background-image: url(image/download/m.png);
+            }
+            
+            div>div{
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 500px;
+                display: flex;
+                justify-content: center;
+            }
+            main{
+                width: 90%;
+                height: 100px;
+                border: 1px solid #FF6600;
+                border-radius: 50px;
+                background-color: white;
+                font-size: 3rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                
+            }
+            header{
+                width: 500px;
+                height: 100%;
+                background-color: #FF6600;
+                color: white;
+                 display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            footer{
+                
+                width: 50%;
+                height: 100%;
+                background-color: white;
+                color: #FF6600;
+                float: right;
+                 display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+             @media (max-width:1115px){
+                header{
+                    width: 50%;
+                }
+            }
+            @media (max-width:700px){
+                div>div{
+                top:68.1vh;
+            }
+              main{
+                height: 13vw;
+                font-size: 3.7vw;
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bg">
+                    <div>
+                        <main>
+                            <header>立即下载</header>
+                            <footer>去应用商店下载</footer>
+                        </main>
+                    </div>
+        </div>
+    </body>
+        
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>

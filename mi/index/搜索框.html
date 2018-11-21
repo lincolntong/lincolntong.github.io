@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <meta name="author" content="童林开">
+        <title>搜索框</title>
+        <style>
+            a:hover{
+                text-decoration-line: none;
+            }
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                margin: 0;
+                height: 100%;
+                background-color: #f5f5f5;
+            }
+            header{
+                height: 9rem;
+                border-bottom: 1px solid #e3e3e3;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 3rem;
+                
+            }
+            header>input{
+                width: 93%;
+                height: 68%;
+            }
+            main{
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                margin: 3rem;
+            }
+            main div{   
+                height: 6rem;
+                padding: 1rem 2rem;
+                font-size: 3rem; 
+                margin: 1rem;
+                background-color: #e4e4e4;
+            }
+            main>div:nth-child(1),main>div:nth-child(2),main>div:nth-child(3){
+                border: 1px solid #FE8A6D;
+                background-color: #F5F0EE;
+            }
+            a,a:hover{
+                color: #333333; 
+            }
+            @media (max-width:720px){
+                header{
+                    height: 12vw;
+                    padding: 0 3vw;
+                }
+                main{
+                    margin: 4vw;
+                }
+                div>a>img{
+                    height: 6vw;
+                    width: 6vw;
+                }
+                main>a>div{
+                    height: 8vw;
+                    padding: 2vw 3vw;
+                    font-size: 4vw;
+                    margin: 1vw;
+                    
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div><a href="index.html"><img src="image/search-image/index.png" alt="返回主页"></a></div>
+            <input type="text">
+            <div><a href="小米Max全网通.html"><img src="image/search-image/search.png" alt="搜索"></a></div>
+        </header>
+        <main>
+        <a href="小米Max全网通.html"><div>小米Max</div></a>
+        <a href="小米Max全网通.html"><div>小米5尊享版 3D玻璃 </div></a>
+        <a href="小米Max全网通.html"><div>红米</div></a>
+        <a href="小米Max全网通.html"><div>小米5标准版白色现货</div></a>
+        <a href="小米Max全网通.html"><div>小米Note</div></a>
+        <a href="小米Max全网通.html"><div>红米3 高配版</div></a>
+        <a href="小米Max全网通.html"><div>小米4</div></a>
+        <a href="小米Max全网通.html"><div>小米4c</div></a>
+        <a href="小米Max全网通.html"><div>耳机</div></a>
+        </main>
+    </body>
+        
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
