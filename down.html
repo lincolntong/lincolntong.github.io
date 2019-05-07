@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>安达出行</title>
+  <link rel="stylesheet" href="./static/index.css">
+</head>
+<body>
+<div class="down_container">
+  <div class="top">
+    <img class="logo" src="./static/images/logo.png" alt="">
+    <div class="title">安达出行</div>
+    <div class="sub version">版本：4.3.4</div>
+    <div class="sub size">大小： 32.4MB</div>
+    <div class="down_btn goDown">
+      <img src="./static/images/icon.png" alt="">
+      <span>下载应用</span>
+    </div>
+  </div>
+  <div class="bottom">
+    <img src="./static/images/iphone.png" alt="">
+    <div class="text">
+      <div>经济、便捷的</div>
+      <p>一站式出行方式</p>
+    </div>
+  </div>
+
+</div>
+<script src="./static/jquery.js"></script>
+<script>
+
+
+  $(function() {
+    const hegiht = document.body.clientHeight;
+    $('.down_container').css('height',hegiht);
+    
+    $('.goDown').click(function () {
+      const Device = isDevice();
+      if(Device === 'ios'){
+        console.log('是ios')
+        window.location.href ='https://appgallery.cloud.huawei.com/uowap/index.html#/detailApp/C100561799?source=appshare&subsource=C100561799';
+      }else if(Device === 'Android'){
+        console.log('是安卓')
+        window.location.href ='http://120.79.85.117:8011/download/passenger/wwcx.apk';
+       /* if(browser()){ // 是否为微信，qq浏览器
+          e.preventDefault();
+          console.log('是微信浏览器')
+        }else{
+          
+        }*/
+      }
+    })
+    
+  });
+
+
+
+  function isDevice(){//判断是android还是ios还是web
+
+    var ua = navigator.userAgent.toLowerCase();
+
+    if(ua.match(/iPhone\sOS/i) == "iphone os" || ua.match(/iPad/i)=="ipad"){//ios
+
+      return "ios";
+
+    }
+
+    if(ua.match(/Android/i) == "android") {
+
+      return "Android";
+
+    }
+
+    return "Web";
+
+  }
+
+  function browser(){//判断浏览器类型
+
+    var ua = window.navigator.userAgent.toLowerCase();
+
+    if(ua.match(/MicroMessenger/i) == 'micromessenger' || ua.match(/QQ/i) == 'qq'){
+      return true;
+    }else{
+      return false;
+    }
+  }
+
+
+</script>
+</body>
+</html>
