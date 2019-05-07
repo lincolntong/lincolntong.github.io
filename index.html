@@ -13,8 +13,8 @@
   <div class="top">
     <img class="logo" src="./static/images/logo.png" alt="">
     <div class="title">安达出行</div>
-    <div class="sub version">版本：4.3.4</div>
-    <div class="sub size">大小： 32.4MB</div>
+    <div class="sub appVersion">版本：2.7.3</div>
+    <div class="sub appSize">大小：14.8</div>
     <div class="down_btn goDown">
       <img src="./static/images/icon.png" alt="">
       <span>下载应用</span>
@@ -31,63 +31,50 @@
 </div>
 <script src="./static/jquery.js"></script>
 <script>
-
-
   $(function() {
     const hegiht = document.body.clientHeight;
+    const Device = isDevice();
     $('.down_container').css('height',hegiht);
-    
+    if(Device === 'ios'){
+      setVersionAndSize('1.4.0','31.6');
+    }
     $('.goDown').click(function () {
-      const Device = isDevice();
       if(Device === 'ios'){
-        console.log('是ios')
         window.location.href ='https://itunes.apple.com/cn/app/%E7%A8%B3%E7%A8%B3%E5%87%BA%E8%A1%8C/id1282983696?mt=8';
-      }else if(Device === 'Android'){
-        console.log('是安卓')
+      }else{
         window.location.href ='http://120.79.85.117:8011/download/passenger/wwcx.apk';
-       /* if(browser()){ // 是否为微信，qq浏览器
-          e.preventDefault();
-          console.log('是微信浏览器')
-        }else{
-          
-        }*/
       }
     })
-    
   });
+
+  function setVersionAndSize(version,size) {
+    $('.appVersion').text('版本：' + version);
+    $('.appSize').text('大小：' + size);
+  }
 
 
 
   function isDevice(){//判断是android还是ios还是web
-
     var ua = navigator.userAgent.toLowerCase();
-
     if(ua.match(/iPhone\sOS/i) == "iphone os" || ua.match(/iPad/i)=="ipad"){//ios
-
       return "ios";
-
     }
-
     if(ua.match(/Android/i) == "android") {
-
       return "Android";
-
     }
-
     return "Web";
-
   }
 
-  function browser(){//判断浏览器类型
-
-    var ua = window.navigator.userAgent.toLowerCase();
-
-    if(ua.match(/MicroMessenger/i) == 'micromessenger' || ua.match(/QQ/i) == 'qq'){
-      return true;
-    }else{
-      return false;
-    }
-  }
+  // function browser(){//判断浏览器类型
+  //
+  //   var ua = window.navigator.userAgent.toLowerCase();
+  //
+  //   if(ua.match(/MicroMessenger/i) == 'micromessenger' || ua.match(/QQ/i) == 'qq'){
+  //     return true;
+  //   }else{
+  //     return false;
+  //   }
+  // }
 
 
 </script>
